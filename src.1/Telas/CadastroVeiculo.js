@@ -16,7 +16,7 @@ import {
   Text, 
   Picker
 } from "native-base";
-
+import styles from '../styles/styles'
 import { AppStyles } from "../AppStyles";
 
 class CadastroVeiculo extends Component {
@@ -45,25 +45,25 @@ class CadastroVeiculo extends Component {
             <Title style={{color: "black"}}>Cadastro Veiculo</Title>
           </Body>
         </Header>
-        <Content style={{marginTop: 100}}>
+        <Content style={{marginTop: 50}}>
           <Form>
-            <Item floatingLabel last style={{ borderBottomColor: "black" }}>
-              <Label>Placa</Label>
+            <Item floatingLabel  style={styles.ItemInput}>
+              <Label style={styles.LabelInput}>Placa</Label>
               <Input />
             </Item>
             
-            <Item floatingLabel last style={{ borderBottomColor: "black" }}>
-              <Label>Modelo</Label>
+            <Item floatingLabel  style={styles.ItemInput}>
+              <Label style={styles.LabelInput}>Modelo</Label>
               <Input />
             </Item>
 
-            <Item floatingLabel last style={{ borderBottomColor: "black" }}>
-              <Label>Marca</Label>
+            <Item floatingLabel  style={styles.ItemInput}>
+              <Label style={styles.LabelInput}>Marca</Label>
               <Input />
             </Item>
 
 
-            <Item picker style={{ borderBottomColor: "black", marginTop: 15 }}>
+            <Item picker style={styles.ItemPicker}>
               <Picker
                 mode="dropdown"
                 iosIcon={<Icon name="ios-arrow-down" />}
@@ -82,7 +82,7 @@ class CadastroVeiculo extends Component {
               </Picker>
             </Item>
           </Form>
-          <Button block  onPress={() => navigate('Home')} style={{ margin: 15, marginTop: 50, backgroundColor: '#F49D05', borderRadius: 25, width: AppStyles.buttonWidth.main, marginLeft: 60}}>
+          <Button block  onPress={() => navigate('Home')} style={styles.ButtonMain}>
             <Text>Salvar</Text>
           </Button>
         </Content>

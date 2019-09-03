@@ -16,6 +16,7 @@ import {
   Text, 
   Picker
 } from "native-base";
+import styles from '../styles/styles'
 
 import { AppStyles } from "../AppStyles";
 
@@ -34,35 +35,35 @@ class CadastroMotorista extends Component {
             <Title style={{color: "black"}}>Cadastro Motorista</Title>
           </Body>
         </Header>
-        <Content style={{marginTop: 100}}>
+        <Content style={{marginTop: 50}}>
           <Form>
-            <Item floatingLabel last style={{ borderBottomColor: "black" }}>
-              <Label>Nome</Label>
+            <Item floatingLabel  style={styles.ItemInput}>
+              <Label style={styles.LabelInput}>Nome</Label>
               <Input />
             </Item>
             
-            <Item floatingLabel last style={{ borderBottomColor: "black" }}>
-              <Label>E-mail</Label>
+            <Item floatingLabel style={styles.ItemInput}>
+              <Label style={styles.LabelInput}>E-mail</Label>
               <Input />
             </Item>
 
-            <Item floatingLabel last style={{ borderBottomColor: "black" }}>
-              <Label>CPF</Label>
+            <Item floatingLabel style={styles.ItemInput}>
+              <Label style={styles.LabelInput}>CPF</Label>
               <Input />
             </Item>
 
-            <Item floatingLabel last style={{ borderBottomColor: "black" }}>
-              <Label>Idade</Label>
+            <Item floatingLabel style={styles.ItemInput}>
+              <Label style={styles.LabelInput}>Idade</Label>
               <Input />
             </Item>
 
-            <Item floatingLabel last style={{ borderBottomColor: "black" }}>
-              <Label>Senha</Label>
+            <Item floatingLabel style={styles.ItemInput}>
+              <Label style={styles.LabelInput}>Senha</Label>
               <Input secureTextEntry />
             </Item>
 
           </Form>
-          <Button block onPress={() => navigate('Home')} style={{ margin: 15, marginTop: 50, backgroundColor: '#F49D05', borderRadius: 25, width: AppStyles.buttonWidth.main, marginLeft: 60}}>
+          <Button block onPress={() => navigate('Home')} style={styles.ButtonMain}>
             <Text>Salvar</Text>
           </Button>
         </Content>

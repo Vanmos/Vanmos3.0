@@ -1,4 +1,5 @@
 import React, { StatusBar, Component } from "react";
+import { View } from 'react-native';
 import {
   Container,
   Header,
@@ -33,16 +34,16 @@ class Home extends Component {
           </Body>
         </Header>
         <Content > 
-            <Body>
+            <View style={{alignItems: "center"}}>
                 
                 <Text>Exemplos</Text>
 
-                <Text onPress={() => navigate('CadastroTransportadora')}>Cadastro Empresa</Text>
+                <Text onPress={() => navigate('CadastroTransportadora')}>Cadastro Transportadora</Text>
                 
                 <Text onPress={() => navigate('CadastroVeiculo')}>Cadastro Veiculos</Text>
                 
                 <Text onPress={() => navigate('CadastroMotorista')}>Cadastro Motorista</Text>
-            </Body>
+            </View>
         </Content>
           
       </Container>

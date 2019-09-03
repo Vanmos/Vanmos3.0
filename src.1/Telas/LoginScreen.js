@@ -16,8 +16,7 @@ import {
   Text, 
   Picker
 } from "native-base";
-
-import { AppStyles } from "../AppStyles";
+import styles from '../styles/styles'
 
 class LoginScreen extends Component {
   static navigationOptions = { 
@@ -34,23 +33,23 @@ class LoginScreen extends Component {
             <Title style={{color: "black"}}>VANMOS</Title>
           </Body>
         </Header>
-        <Content style={{marginTop: 100}}>
+        <Content style={{marginTop: 50}}>
           <Form>
-            <Item floatingLabel last style={{ borderBottomColor: "black" }}>
+            <Item floatingLabel style={ styles.ItemInput}>
               <Icon active name="mail" /> 
-              <Label>E-mail</Label>
+              <Label style={styles.LabelInput}>E-mail</Label>
               <Input />
             </Item>
             
-            <Item floatingLabel last style={{ borderBottomColor: "black" }}>
+            <Item floatingLabel style={styles.ItemInput}>
               <Icon active name="key" /> 
-              <Label>Senha</Label>
+              <Label style={styles.LabelInput}>Senha</Label>
               <Input secureTextEntry />
             </Item>
 
            
           </Form>
-          <Button block onPress={() => navigate('Home')} style={{ margin: 15, marginTop: 50, backgroundColor: '#F49D05', borderRadius: 25, width: AppStyles.buttonWidth.main, marginLeft: 60}}>
+          <Button block onPress={() => navigate('Home')} style={styles.ButtonMain}>
             <Text>Entrar</Text>
           </Button>
           <Text onPress={() => navigate('Cadastro')} style={{ marginLeft: 100}}>Novo Aqui? Cadastre-se</Text>
